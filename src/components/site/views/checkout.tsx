@@ -295,7 +295,7 @@ export function CheckoutView() {
                 <div className="flex items-center justify-between rounded-sm border border-dourado/60 bg-linho/60 px-3 py-2.5">
                   <p className="flex items-center gap-2 text-[13px] font-medium text-marsala-deep">
                     <BadgeCheck className="h-4 w-4 text-dourado" />
-                    {couponCode} — {COUPONS[couponCode]?.label}
+                    {couponCode} · {COUPONS[couponCode]?.label}
                   </p>
                   <button
                     type="button"

@@ -45,7 +45,7 @@ export function ProdutoView({
     return (
       <div className="bg-creme">
         <ErrorBlock
-          message="Não encontramos esta peça — talvez ela tenha sido renomeada ou removida do catálogo."
+          message="Não encontramos esta peça. Talvez ela tenha sido renomeada ou removida do catálogo."
           onRetry={() => navigateTo('#/catalogo')}
         />
       </div>

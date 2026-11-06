@@ -198,7 +198,7 @@ export function PedidoView({ code }: { code?: string }) {
             <br />
             {order.address}
             <br />
-            {order.city} — {order.state}, CEP {order.cep}
+            {order.city} · {order.state}, CEP {order.cep}
           </address>
         </div>
 

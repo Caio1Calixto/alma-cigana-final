@@ -18,7 +18,7 @@ const FAQ = [
   },
   {
     q: 'Como funciona o frete?',
-    a: `O frete é grátis para compras acima de ${formatBRL(FREE_SHIPPING_THRESHOLD)}. Abaixo desse valor, a contribuição fixa é de ${formatBRL(19.9)} — tudo calculado automaticamente na sacola.`,
+    a: `O frete é grátis para compras acima de ${formatBRL(FREE_SHIPPING_THRESHOLD)}. Abaixo desse valor, a contribuição fixa é de ${formatBRL(19.9)}, tudo calculado automaticamente na sacola.`,
   },
   {
     q: 'Posso trocar uma peça?',
@@ -47,7 +47,7 @@ export function ContatoView() {
           </h1>
           <OrnamentDivider className="mt-5" />
           <p className="mx-auto mt-5 max-w-xl text-[14px] leading-relaxed text-creme/70">
-            Tire dúvidas sobre peças, acompanhe seu pedido ou só venha dizer oi — respondemos
+            Tire dúvidas sobre peças, acompanhe seu pedido ou só venha dizer oi, respondemos
             rapidinho e com todo o carinho.
           </p>
         </div>
@@ -63,7 +63,7 @@ export function ContatoView() {
               </span>
               <h2 className="mt-4 font-serif text-2xl font-semibold text-marsala-deep">WhatsApp</h2>
               <p className="mt-1 text-[14px] text-tinta/70">
-                Atendimento pessoal — o canal mais rápido para pedidos e dúvidas.
+                Atendimento pessoal: o canal mais rápido para pedidos e dúvidas.
               </p>
               <p className="mt-3 font-mono text-[15px] font-semibold tracking-wide text-marsala">
                 {SITE.whatsappDisplay}

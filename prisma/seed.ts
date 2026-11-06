@@ -30,7 +30,7 @@ const categories = [
 ];
 
 const products = [
-  // ——— Colares ———
+  // Colares
   {
     slug: 'colar-rosa-dourada',
     name: 'Colar Rosa Dourada',
@@ -103,7 +103,7 @@ const products = [
     description:
       'Um símbolo de novas possibilidades, oportunidades e caminhos que se abrem. Uma joia para quem acredita na força dos símbolos e gosta de carregar consigo significados especiais.',
   },
-  // ——— Braceletes & Pulseiras ———
+  // Braceletes & Pulseiras
   {
     slug: 'bracelete-forca-cigana',
     name: 'Bracelete Força Cigana',
@@ -130,7 +130,7 @@ const products = [
   },
   {
     slug: 'encanto-cigano',
-    name: 'Encanto Cigano — Trio de Pulseiras',
+    name: 'Encanto Cigano: Trio de Pulseiras',
     category: 'braceletes-pulseiras',
     price: 89.9,
     featured: true,
@@ -150,7 +150,7 @@ const products = [
     material: 'Semijoia em banho de ouro 18k',
     details: 'Corrente de 18 cm com extensão de 2 cm · pingentes de lua e estrela',
     description:
-      'Delicada como o céu da noite, esta pulseira reúne a lua e a estrela — os dois símbolos que assinam a Alma Cigana — em um toque discreto e cheio de significado.',
+      'Delicada como o céu da noite, esta pulseira reúne a lua e a estrela, os dois símbolos que assinam a Alma Cigana, em um toque discreto e cheio de significado.',
   },
   {
     slug: 'pulseira-elos-delicados',
@@ -164,7 +164,7 @@ const products = [
     description:
       'Elos dourados que se entrelaçam como fios de uma história. Uma pulseira versátil e elegante, perfeita para usar sozinha ou combinada com outras peças.',
   },
-  // ——— Anéis ———
+  // Anéis
   {
     slug: 'anel-lua-e-estrela',
     name: 'Anel Lua & Estrela',
@@ -187,9 +187,9 @@ const products = [
     material: 'Semijoia em banho de ouro 18k',
     details: 'Anel ajustável · rosa esculpida em miniatura',
     description:
-      'A rosa que nunca murcha. Esculpida em miniatura, esta flor dourada traduz a beleza e a força que florescem mesmo diante dos desafios — a essência da Alma Cigana.',
+      'A rosa que nunca murcha. Esculpida em miniatura, esta flor dourada traduz a beleza e a força que florescem mesmo diante dos desafios, a essência da Alma Cigana.',
   },
-  // ——— Brincos ———
+  // Brincos
   {
     slug: 'brincos-gotas-de-lua',
     name: 'Brincos Gotas de Lua',
@@ -274,7 +274,7 @@ async function main() {
           email: 'mariana@example.com',
           phone: '(11) 98888-1234',
           cep: '03178-200',
-          address: 'Rua Serra de Bragança, 112 — apto 54',
+          address: 'Rua Serra de Bragança, 112, apto 54',
           city: 'São Paulo',
           state: 'SP',
           paymentMethod: 'pix',
@@ -298,7 +298,7 @@ async function main() {
           email: 'camila@example.com',
           phone: '(11) 97777-4321',
           cep: '01310-100',
-          address: 'Av. Paulista, 1000 — cj 74',
+          address: 'Av. Paulista, 1000, cj 74',
           city: 'São Paulo',
           state: 'SP',
           paymentMethod: 'cartao',

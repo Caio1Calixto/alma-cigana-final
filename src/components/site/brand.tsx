@@ -33,7 +33,7 @@ export function Emblem({ className }: { className?: string }) {
   );
 }
 
-/** Filete dourado com estrela central — ornamento divisor de seções. */
+/** Filete dourado com estrela central, ornamento divisor de seções. */
 export function OrnamentDivider({ className }: { className?: string }) {
   return (
     <div className={`flex items-center justify-center gap-3 ${className ?? ''}`} aria-hidden="true">

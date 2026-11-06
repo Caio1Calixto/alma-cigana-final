@@ -99,7 +99,7 @@ export function CatalogoView({
           </h1>
           <OrnamentDivider className="mt-5" />
           <p className="mx-auto mt-5 max-w-xl text-[14px] leading-relaxed text-creme/70">
-            Peças em dourado com simbolismo e delicadeza — escolha as suas favoritas e receba com
+            Peças em dourado com simbolismo e delicadeza: escolha as suas favoritas e receba com
             todo o carinho da Alma Cigana.
           </p>
         </div>
@@ -153,7 +153,7 @@ export function CatalogoView({
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="destaque">Em destaque</SelectItem>
-                <SelectItem value="nome">Nome (A–Z)</SelectItem>
+                <SelectItem value="nome">Nome (A-Z)</SelectItem>
                 <SelectItem value="preco-asc">Menor preço</SelectItem>
                 <SelectItem value="preco-desc">Maior preço</SelectItem>
               </SelectContent>

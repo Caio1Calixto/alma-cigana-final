@@ -19,7 +19,7 @@ export function Footer({ categories }: { categories?: { slug: string; name: stri
             </span>
           </div>
           <p className="max-w-xs text-[13px] leading-relaxed text-creme/60">
-            Joias e acessórios com alma — marsala e dourado, lua, estrela e rosa em cada peça.
+            Joias e acessórios com alma: marsala e dourado, lua, estrela e rosa em cada peça.
           </p>
           <div className="flex gap-3">
             <a
@@ -44,7 +44,7 @@ export function Footer({ categories }: { categories?: { slug: string; name: stri
         </div>
 
         {/* Navegação */}
-        <nav aria-label="Rodapé — navegação">
+        <nav aria-label="Rodapé, navegação">
           <h3 className="mb-4 text-[11px] font-medium uppercase tracking-eyebrow text-dourado">
             Navegação
           </h3>
@@ -58,7 +58,7 @@ export function Footer({ categories }: { categories?: { slug: string; name: stri
         </nav>
 
         {/* Categorias */}
-        <nav aria-label="Rodapé — categorias">
+        <nav aria-label="Rodapé, categorias">
           <h3 className="mb-4 text-[11px] font-medium uppercase tracking-eyebrow text-dourado">
             Categorias
           </h3>
@@ -107,7 +107,7 @@ export function Footer({ categories }: { categories?: { slug: string; name: stri
               </a>
             </li>
             <li className="mt-2 text-[13px] text-creme/50">
-              Atendimento pessoal — cada pedido vira uma conversa com a loja.
+              Atendimento pessoal: cada pedido vira uma conversa com a loja.
             </li>
           </ul>
         </div>
@@ -115,7 +115,7 @@ export function Footer({ categories }: { categories?: { slug: string; name: stri
 
       <div className="border-t border-creme/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-center text-[12px] text-creme/50 sm:flex-row sm:px-6 lg:px-8">
-          <p>© {year} Alma Cigana · Joias &amp; Acessórios — Todos os direitos reservados.</p>
+          <p>© {year} Alma Cigana · Joias &amp; Acessórios · Todos os direitos reservados.</p>
           <p className="flex items-center gap-2">
             <StarMark className="h-2.5 w-2.5 text-dourado/70" />
             Feito com alma
@@ -125,7 +125,7 @@ export function Footer({ categories }: { categories?: { slug: string; name: stri
             type="button"
             onClick={() => navigateTo('#/loja')}
             className="inline-flex items-center gap-1.5 text-creme/40 transition-colors hover:text-dourado-claro"
-            aria-label="Área da loja — gestão de pedidos"
+            aria-label="Área da loja, gestão de pedidos"
           >
             <ShoppingBag className="h-3.5 w-3.5" strokeWidth={1.6} />
             Área da loja

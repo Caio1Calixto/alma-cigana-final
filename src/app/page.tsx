@@ -25,7 +25,7 @@ function TopBar() {
         <Star className="h-3 w-3 fill-dourado text-dourado" aria-hidden="true" />
         Frete grátis acima de R$ 199
         <span aria-hidden="true" className="text-dourado/60">·</span>
-        Cupom ALMA10 — 10% off
+        Cupom ALMA10: 10% off
         <span aria-hidden="true" className="text-dourado/60">·</span>
         Atendimento pelo WhatsApp
       </p>

@@ -53,7 +53,7 @@ export function Header({ route }: { route: RouteInfo }) {
           type="button"
           onClick={() => go('#/')}
           className="group flex items-center gap-2.5"
-          aria-label="Alma Cigana — ir para o início"
+          aria-label="Alma Cigana, ir para o início"
         >
           <Emblem className="h-8 w-8 text-marsala transition-transform duration-300 group-hover:rotate-6 sm:h-9 sm:w-9" />
           <span className="flex flex-col leading-none text-left">
