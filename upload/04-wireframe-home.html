@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alma Cigana — Wireframe da Página Inicial (Ciclo 0)</title>
+<style>
+  :root{
+    --ink:#1f1f1f; --ink2:#555; --line:#9a9a9a; --dash:#b5b5b5;
+    --paper:#ffffff; --bg:#ececec; --fill:#f5f5f5; --fill2:#e4e4e4;
+    --accent:#1f1f1f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bg); color:var(--ink); font:14px/1.55 "Helvetica Neue", Helvetica, Arial, sans-serif; padding:40px 20px 80px;}
+  .doc{max-width:1180px; margin:0 auto;}
+  .doc-head{border-bottom:3px solid var(--ink); padding-bottom:18px; margin-bottom:14px;}
+  .kicker{font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink2); margin-bottom:8px;}
+  h1{font-size:30px; letter-spacing:-.01em; margin-bottom:6px;}
+  .meta{font-size:12px; color:var(--ink2); display:flex; flex-wrap:wrap; gap:6px 18px;}
+  .notice{margin:18px 0 30px; border:1px dashed var(--line); background:var(--paper); padding:14px 18px; font-size:13px; color:var(--ink2);}
+  .notice b{color:var(--ink);}
+  h2{font-size:19px; margin:44px 0 6px; letter-spacing:.02em;}
+  h2 .n{display:inline-block; background:var(--ink); color:#fff; font-size:12px; padding:2px 9px; margin-right:10px; vertical-align:2px;}
+  .sub{font-size:13px; color:var(--ink2); margin-bottom:18px;}
+
+  /* ---------- frames ---------- */
+  .stage{display:flex; gap:44px; align-items:flex-start; flex-wrap:wrap;}
+  .frame{background:var(--paper); border:1px solid var(--line); box-shadow:0 2px 0 rgba(0,0,0,.08);}
+  .frame .bar{height:26px; border-bottom:1px solid var(--line); display:flex; align-items:center; gap:6px; padding:0 10px; background:var(--fill);}
+  .frame .bar i{width:8px; height:8px; border-radius:50%; background:var(--dash); display:block;}
+  .frame .bar span{font-size:10px; color:var(--ink2); margin-left:8px; letter-spacing:.08em;}
+  .canvas{padding:0;}
+  .desktop{width:880px; max-width:100%;}
+  .mobile{width:300px;}
+
+  /* ---------- wireframe blocks ---------- */
+  .blk{position:relative; border:1px dashed var(--dash); background:var(--fill); margin:10px; padding:12px;}
+  .tag{position:absolute; top:-9px; left:-9px; width:20px; height:20px; background:var(--ink); color:#fff; font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center; border-radius:50%;}
+  .lbl{font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink2); margin-bottom:8px;}
+  .ph{background:
+      linear-gradient(to top right, transparent calc(50% - .5px), var(--dash) calc(50% - .5px), var(--dash) calc(50% + .5px), transparent calc(50% + .5px)),
+      linear-gradient(to top left,  transparent calc(50% - .5px), var(--dash) calc(50% - .5px), var(--dash) calc(50% + .5px), transparent calc(50% + .5px)),
+      var(--fill2);
+      border:1px solid var(--dash); display:flex; align-items:center; justify-content:center; font-size:10px; color:var(--ink2); letter-spacing:.1em; text-transform:uppercase;}
+  .line{height:8px; background:var(--fill2); border:1px solid var(--dash); margin:5px 0;}
+  .line.w60{width:60%;} .line.w80{width:80%;} .line.w40{width:40%;} .line.t{height:14px; background:var(--fill2);}
+  .btn{display:inline-block; border:1px solid var(--ink); background:var(--fill2); font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:6px 14px; margin-right:8px; color:var(--ink);}
+  .btn.ghost{border-style:dashed; background:transparent;}
+  .row{display:flex; gap:10px; align-items:stretch;}
+  .col{flex:1;}
+  .grid4{display:grid; grid-template-columns:repeat(4,1fr); gap:10px;}
+  .grid2{display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
+  .circle{width:30px; height:30px; border:1px solid var(--ink); border-radius:50%; display:inline-block; margin-right:8px;}
+  .dark{background:var(--fill2);}
+  .note-inline{font-size:10px; color:var(--ink2);}
+
+  /* header block */
+  .hdr{display:flex; align-items:center; gap:14px; padding:10px 12px;}
+  .logo-ph{width:74px; height:34px; border:1px solid var(--ink); display:flex; align-items:center; justify-content:center; font-size:9px; letter-spacing:.12em;}
+  .nav{display:flex; gap:14px; margin-left:auto; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink2);}
+  .nav u{text-decoration:none; border-bottom:2px solid var(--ink); padding-bottom:2px; color:var(--ink);}
+
+  /* hero */
+  .hero{display:flex; gap:12px; min-height:250px;}
+  .hero .txt{flex:1.1; display:flex; flex-direction:column; justify-content:center; padding:8px;}
+  .hero .img{flex:1; min-height:230px;}
+
+  /* mobile specifics */
+  .m-hdr{display:flex; align-items:center; justify-content:space-between; padding:8px 10px;}
+  .burger{width:20px; height:14px; border-top:2px solid var(--ink); border-bottom:2px solid var(--ink); position:relative;}
+  .burger:after{content:""; position:absolute; left:0; right:0; top:4px; border-top:2px solid var(--ink);}
+  .m-nav-panel{border:1px dashed var(--dash); background:var(--fill2); padding:8px 10px; margin:0 10px 10px; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink2);}
+  .m-nav-panel div{padding:3px 0; border-bottom:1px dotted var(--dash);}
+  .float-wa{position:absolute; right:14px; bottom:14px; width:40px; height:40px; border-radius:50%; border:2px solid var(--ink); background:var(--fill2); display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:700;}
+
+  /* annotations table */
+  table{width:100%; border-collapse:collapse; background:var(--paper); border:1px solid var(--line); font-size:13px;}
+  th{background:var(--ink); color:#fff; text-align:left; font-size:11px; letter-spacing:.12em; text-transform:uppercase; padding:10px 12px;}
+  td{border-top:1px solid #d9d9d9; padding:10px 12px; vertical-align:top;}
+  td.n{font-weight:700; width:34px; text-align:center;}
+  td.sec{width:190px; font-weight:600;}
+  .doc-foot{margin-top:46px; border-top:1px solid var(--line); padding-top:14px; font-size:12px; color:var(--ink2); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <div class="doc-head">
+    <div class="kicker">Alma Cigana · Ciclo 0 — Planejamento e Prototipação</div>
+    <h1>Wireframe da Página Inicial</h1>
+    <div class="meta">
+      <span>Entregável 4</span><span>Versão 1.0 · 03/11/2026</span>
+      <span>Referência: Painel Mestre do Projeto v2.0</span>
+      <span>Estrutura de 9 seções</span>
+    </div>
+  </div>
+
+  <div class="notice">
+    <b>Como ler este wireframe.</b> Diagrama estrutural em tons de cinza: caixas tracejadas com “X” são áreas de imagem,
+    barras horizontais são linhas de texto e retângulos rotulados são botões. Os números em preto identificam as
+    <b>9 seções</b> da página, cuja finalidade e posição estão explicadas na tabela de anotações ao final.
+    <b>Wireframe não é o site:</b> cores, tipografia e fotografias reais aparecem no protótipo visual (<i>05-prototipo-home.html</i>).
+  </div>
+
+  <!-- ============ DESKTOP ============ -->
+  <h2><span class="n">A</span>Wireframe — Desktop (≥ 1024 px)</h2>
+  <div class="sub">Ordem de leitura de cima para baixo. Largura de conteúdo centralizada em ~1200 px no site real.</div>
+
+  <div class="stage">
+    <div class="frame desktop">
+      <div class="bar"><i></i><i></i><i></i><span>almacigana — página inicial · desktop</span></div>
+      <div class="canvas">
+
+        <!-- 1 HEADER -->
+        <div class="blk hdr">
+          <span class="tag">1</span>
+          <div class="logo-ph">LOGO</div>
+          <div class="nav"><u>Início</u><span>Sobre</span><span>Catálogo ▾</span><span>Contato</span></div>
+          <span class="btn">WhatsApp</span>
+        </div>
+
+        <!-- 2 HERO -->
+        <div class="blk">
+          <span class="tag">2</span>
+          <div class="lbl">Banner principal · primeira dobra</div>
+          <div class="hero">
+            <div class="txt">
+              <div class="line w40"></div>
+              <div class="line t" style="width:92%"></div>
+              <div class="line t" style="width:70%"></div>
+              <div class="line w80"></div>
+              <div style="margin-top:10px"><span class="btn">Ver catálogo</span><span class="btn ghost">Falar no WhatsApp</span></div>
+            </div>
+            <div class="ph hero img">imagem de clima da marca</div>
+          </div>
+        </div>
+
+        <!-- 3 APRESENTAÇÃO -->
+        <div class="blk">
+          <span class="tag">3</span>
+          <div class="lbl">Apresentação da marca</div>
+          <div class="row">
+            <div class="ph col" style="min-height:150px">fotografia / detalhe do logo</div>
+            <div class="col" style="padding:6px">
+              <div class="line w40"></div>
+              <div class="line t" style="width:80%"></div>
+              <div class="line"></div><div class="line"></div><div class="line w60"></div>
+              <div style="margin-top:8px"><span class="btn ghost">Conhecer a marca</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 CATEGORIAS -->
+        <div class="blk">
+          <span class="tag">4</span>
+          <div class="lbl">Categorias de produtos · grade 4 colunas</div>
+          <div class="grid4">
+            <div><div class="ph" style="height:96px">cat. 01</div><div class="line w60"></div></div>
+            <div><div class="ph" style="height:96px">cat. 02</div><div class="line w60"></div></div>
+            <div><div class="ph" style="height:96px">cat. 03</div><div class="line w60"></div></div>
+            <div><div class="ph" style="height:96px">cat. 04</div><div class="line w60"></div></div>
+          </div>
+          <div class="note-inline" style="margin-top:6px">Quantidade e nomes reais definidos pelo cliente; grade adapta-se ao número enviado.</div>
+        </div>
+
+        <!-- 5 DESTAQUES -->
+        <div class="blk">
+          <span class="tag">5</span>
+          <div class="lbl">Produtos em destaque · grade 4 colunas</div>
+          <div class="grid4">
+            <div><div class="ph" style="height:110px">foto 4:5</div><div class="line w80"></div><div class="line w40"></div><div class="note-inline">pedido whatsapp</div></div>
+            <div><div class="ph" style="height:110px">foto 4:5</div><div class="line w80"></div><div class="line w40"></div><div class="note-inline">pedido whatsapp</div></div>
+            <div><div class="ph" style="height:110px">foto 4:5</div><div class="line w80"></div><div class="line w40"></div><div class="note-inline">pedido whatsapp</div></div>
+            <div><div class="ph" style="height:110px">foto 4:5</div><div class="line w80"></div><div class="line w40"></div><div class="note-inline">pedido whatsapp</div></div>
+          </div>
+          <div style="margin-top:10px; text-align:center"><span class="btn ghost">Ver catálogo completo</span></div>
+        </div>
+
+        <!-- 6 INSTITUCIONAL -->
+        <div class="blk dark">
+          <span class="tag">6</span>
+          <div class="lbl">Seção institucional · faixa escura (marsala no site)</div>
+          <div class="grid3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px;">
+            <div><div class="line t w60"></div><div class="line"></div><div class="line w80"></div></div>
+            <div><div class="line t w60"></div><div class="line"></div><div class="line w80"></div></div>
+            <div><div class="line t w60"></div><div class="line"></div><div class="line w80"></div></div>
+          </div>
+        </div>
+
+        <!-- 7 CTA WHATSAPP -->
+        <div class="blk" style="text-align:center; padding:20px 12px;">
+          <span class="tag">7</span>
+          <div class="lbl">Chamada para atendimento via WhatsApp</div>
+          <div class="line t" style="width:55%; margin:0 auto 6px"></div>
+          <div class="line w40" style="margin:0 auto 12px"></div>
+          <span class="btn">Chamar no WhatsApp</span>
+        </div>
+
+        <!-- 8 REDES -->
+        <div class="blk" style="text-align:center;">
+          <span class="tag">8</span>
+          <div class="lbl">Redes sociais</div>
+          <span class="circle"></span><span class="circle"></span><span class="circle"></span>
+          <div class="note-inline">canais e links reais a definir pelo cliente</div>
+        </div>
+
+        <!-- 9 RODAPÉ -->
+        <div class="blk dark">
+          <span class="tag">9</span>
+          <div class="lbl">Rodapé institucional</div>
+          <div class="grid4">
+            <div><div class="line t w60"></div><div class="line w80"></div><div class="line w60"></div></div>
+            <div><div class="line t w60"></div><div class="line w80"></div><div class="line w60"></div></div>
+            <div><div class="line t w60"></div><div class="line w80"></div><div class="line w60"></div></div>
+            <div><div class="line t w60"></div><div class="line w80"></div><div class="line w60"></div></div>
+          </div>
+          <div class="line" style="margin-top:10px"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MOBILE ============ -->
+  <h2><span class="n">B</span>Wireframe — Mobile (390 px)</h2>
+  <div class="sub">Mesmas 9 seções, reorganizadas para uma coluna. Menu recolhido e WhatsApp ao alcance do polegar.</div>
+
+  <div class="stage">
+    <div class="frame mobile" style="position:relative;">
+      <div class="bar"><i></i><i></i><i></i><span>mobile</span></div>
+      <div class="canvas" style="padding-bottom:56px;">
+
+        <div class="blk m-hdr" style="margin:8px 10px;">
+          <span class="tag">1</span>
+          <div class="logo-ph" style="width:56px; height:26px;">LOGO</div>
+          <div class="burger"></div>
+        </div>
+        <div class="m-nav-panel">menu expandido (estado aberto)
+          <div>Início</div><div>Sobre</div><div>Catálogo + categorias</div><div>Contato</div><div>→ WhatsApp</div>
+        </div>
+
+        <div class="blk" style="margin:0 10px 10px;">
+          <span class="tag">2</span>
+          <div class="ph" style="height:110px">imagem de clima</div>
+          <div class="line t" style="margin-top:8px"></div><div class="line t w80"></div>
+          <div class="line w60"></div>
+          <div style="margin-top:8px"><span class="btn">Catálogo</span><span class="btn ghost">WhatsApp</span></div>
+        </div>
+
+        <div class="blk" style="margin:0 10px 10px;">
+          <span class="tag">3</span>
+          <div class="ph" style="height:90px">foto / logo</div>
+          <div class="line t w80" style="margin-top:8px"></div><div class="line"></div><div class="line w60"></div>
+        </div>
+
+        <div class="blk" style="margin:0 10px 10px;">
+          <span class="tag">4</span>
+          <div class="grid2">
+            <div><div class="ph" style="height:64px">cat. 01</div></div>
+            <div><div class="ph" style="height:64px">cat. 02</div></div>
+            <div><div class="ph" style="height:64px">cat. 03</div></div>
+            <div><div class="ph" style="height:64px">cat. 04</div></div>
+          </div>
+        </div>
+
+        <div class="blk" style="margin:0 10px 10px;">
+          <span class="tag">5</span>
+          <div class="grid2">
+            <div><div class="ph" style="height:80px">4:5</div><div class="line w80"></div><div class="line w40"></div></div>
+            <div><div class="ph" style="height:80px">4:5</div><div class="line w80"></div><div class="line w40"></div></div>
+          </div>
+        </div>
+
+        <div class="blk dark" style="margin:0 10px 10px;">
+          <span class="tag">6</span>
+          <div class="line t w60"></div><div class="line"></div><div class="line w80"></div>
+        </div>
+
+        <div class="blk" style="margin:0 10px 10px; text-align:center;">
+          <span class="tag">7</span>
+          <div class="line t w80" style="margin:0 auto 6px"></div>
+          <span class="btn">WhatsApp</span>
+        </div>
+
+        <div class="blk" style="margin:0 10px 10px; text-align:center;">
+          <span class="tag">8</span>
+          <span class="circle" style="width:24px;height:24px"></span><span class="circle" style="width:24px;height:24px"></span><span class="circle" style="width:24px;height:24px"></span>
+        </div>
+
+        <div class="blk dark" style="margin:0 10px 10px;">
+          <span class="tag">9</span>
+          <div class="line t w60"></div><div class="line w80"></div><div class="line w60"></div><div class="line w80"></div>
+        </div>
+
+        <div class="float-wa">WA</div>
+      </div>
+    </div>
+
+    <div style="max-width:560px; font-size:13px; color:var(--ink2);">
+      <p style="margin-bottom:10px"><b style="color:var(--ink)">Adaptações mobile previstas:</b></p>
+      <ul style="padding-left:18px; display:grid; gap:6px;">
+        <li>Seção 1: menu vira painel expansível; categorias listadas dentro de “Catálogo”.</li>
+        <li>Seção 2: imagem acima ou abaixo do texto, altura reduzida (~60–70% da tela).</li>
+        <li>Seções 4 e 5: grades de 4 colunas viram 2 colunas (ou carrossel com arraste).</li>
+        <li>Seção 6: pilares empilhados verticalmente.</li>
+        <li>Seções 7–8: centralizadas, com botão em largura confortável ao polegar.</li>
+        <li>Botão flutuante de WhatsApp discreto no canto inferior direito (opcional, a aprovar).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ ANOTAÇÕES ============ -->
+  <h2><span class="n">C</span>Anotações — finalidade e posição de cada seção</h2>
+  <div class="sub">A numeração corresponde às etiquetas pretas dos wireframes A e B.</div>
+
+  <table>
+    <tr><th>#</th><th>Seção</th><th>Finalidade</th><th>Posição na página</th></tr>
+    <tr><td class="n">1</td><td class="sec">Cabeçalho com logotipo e navegação</td>
+      <td>Orientação permanente: identifica a marca, dá acesso a todas as páginas (Início, Sobre, Catálogo + categorias, Contato) e mantém o CTA de WhatsApp sempre visível. É o único elemento fixo da página.</td>
+      <td>Topo, global e fixo. No mobile, recolhido em menu.</td></tr>
+    <tr><td class="n">2</td><td class="sec">Banner principal</td>
+      <td>Primeiro impacto: comunica o universo da marca (imagem de clima), traz o título principal e os dois caminhos de entrada — explorar o catálogo ou falar no WhatsApp.</td>
+      <td>Primeira dobra, logo abaixo do cabeçalho. Altura ~70–85% da tela (desktop).</td></tr>
+    <tr><td class="n">3</td><td class="sec">Apresentação da marca</td>
+      <td>Contextualiza quem é a Alma Cigana em um parágrafo curto, com apoio visual, e conduz à página “Sobre” para quem quer profundidade.</td>
+      <td>Segunda dobra, após o banner. Layout alternado texto/imagem.</td></tr>
+    <tr><td class="n">4</td><td class="sec">Categorias de produtos</td>
+      <td>Organiza o catálogo por tipo de acessório e oferece atalhos diretos para as páginas de categoria — reduz o esforço de exploração.</td>
+      <td>Meio superior da página, após a apresentação. Grade 4 colunas (2 no mobile).</td></tr>
+    <tr><td class="n">5</td><td class="sec">Produtos em destaque</td>
+      <td>Vitrine comercial: antecipa a experiência do catálogo com peças escolhidas pela loja, mostrando o padrão do cartão (foto, nome, preço, pedido via WhatsApp).</td>
+      <td>Meio da página, após categorias. Grade 4 colunas + link para o catálogo completo.</td></tr>
+    <tr><td class="n">6</td><td class="sec">Seção institucional</td>
+      <td>Reforça confiança e identidade: pilares da marca (autoria, cuidado, atendimento pessoal) em faixa escura de contraste, quebrando o ritmo claro da página.</td>
+      <td>Após os destaques, antes da conversão. Faixa pleine largeur em marsala profundo.</td></tr>
+    <tr><td class="n">7</td><td class="sec">Chamada para atendimento (WhatsApp)</td>
+      <td>Ponto de conversão principal do site: transforma a visita em conversa, com botão de atendimento direto.</td>
+      <td>Termo da narrativa comercial, após a seção institucional.</td></tr>
+    <tr><td class="n">8</td><td class="sec">Redes sociais</td>
+      <td>Conecta o site aos canais onde a marca já vive; facilita divulgação cruzada e prova de vida da marca.</td>
+      <td>Após a chamada de WhatsApp, imediatamente antes do rodapé.</td></tr>
+    <tr><td class="n">9</td><td class="sec">Rodapé institucional</td>
+      <td>Fecho institucional e segunda navegação: mapa do site, categorias, contato, redes, informações legais e copyright. Evita becos sem saída.</td>
+      <td>Fim da página, global em todas as telas do site.</td></tr>
+  </table>
+
+  <div class="doc-foot">
+    <span>Alma Cigana · Wireframe da página inicial · Ciclo 0 — planejamento e prototipação</span>
+    <span>Este diagrama não é o site finalizado · 03/11/2026</span>
+  </div>
+</div>
+</body>
+</html>

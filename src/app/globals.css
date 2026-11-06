@@ -1,0 +1,166 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* ——— Paleta Alma Cigana: marsala é a base, dourado é acabamento ——— */
+  --color-marsala: #7a1220;
+  --color-marsala-deep: #4a0710;
+  --color-marsala-night: #2e050b;
+  --color-dourado: #c6a15b;
+  --color-dourado-claro: #ebd9a9;
+  --color-creme: #faf6ee;
+  --color-linho: #f1e8d8;
+  --color-tinta: #2b1a1d;
+}
+
+:root {
+  --radius: 0.25rem;
+  --background: #faf6ee;
+  --foreground: #2b1a1d;
+  --card: #ffffff;
+  --card-foreground: #2b1a1d;
+  --popover: #ffffff;
+  --popover-foreground: #2b1a1d;
+  --primary: #7a1220;
+  --primary-foreground: #fbf3e4;
+  --secondary: #f1e8d8;
+  --secondary-foreground: #4a0710;
+  --muted: #f1e8d8;
+  --muted-foreground: #7c6a60;
+  --accent: #f1e8d8;
+  --accent-foreground: #4a0710;
+  --destructive: #7a1220;
+  --border: #e7dcc8;
+  --input: #e0d2b8;
+  --ring: #c6a15b;
+  --chart-1: #7a1220;
+  --chart-2: #c6a15b;
+  --chart-3: #ebd9a9;
+  --chart-4: #4a0710;
+  --chart-5: #2e050b;
+  --sidebar: #faf6ee;
+  --sidebar-foreground: #2b1a1d;
+  --sidebar-primary: #7a1220;
+  --sidebar-primary-foreground: #fbf3e4;
+  --sidebar-accent: #f1e8d8;
+  --sidebar-accent-foreground: #4a0710;
+  --sidebar-border: #e7dcc8;
+  --sidebar-ring: #c6a15b;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "liga" 1;
+  }
+  ::selection {
+    background: color-mix(in srgb, #c6a15b 35%, transparent);
+    color: #2b1a1d;
+  }
+}
+
+/* ——— Barra de rolagem discreta em tom da marca ——— */
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(122, 18, 32, 0.28) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: rgba(122, 18, 32, 0.24);
+    border-radius: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer utilities {
+  .tracking-eyebrow {
+    letter-spacing: 0.18em;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes alma-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes alma-pulse-soft {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.alma-fade-up {
+  animation: alma-fade-up 0.7s ease-out both;
+}
+
+.alma-pulse-soft {
+  animation: alma-pulse-soft 2.4s ease-in-out infinite;
+}
