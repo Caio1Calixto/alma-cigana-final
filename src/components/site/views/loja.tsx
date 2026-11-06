@@ -208,7 +208,7 @@ export function LojaView() {
 
         <div className="mt-10 flex items-center justify-center gap-2 text-[12px] text-tinta/45">
           <TrendingUp className="h-3.5 w-3.5" />
-          Painel demonstrativo — os pedidos são salvos no banco de dados da loja.
+          Painel demonstrativo: os pedidos são salvos no banco de dados da loja.
         </div>
       </div>
     </div>

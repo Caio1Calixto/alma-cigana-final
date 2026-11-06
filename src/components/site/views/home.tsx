@@ -22,7 +22,7 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
 
   return (
     <>
-      {/* ——— Banner principal ——— */}
+      {/* Banner principal */}
       <section className="relative overflow-hidden bg-marsala-deep">
         <div
           className="pointer-events-none absolute inset-0 opacity-60"
@@ -47,7 +47,7 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
               Mais que acessórios: símbolos de beleza, identidade e significado.
             </p>
             <p className="mt-4 max-w-md text-[15px] leading-relaxed text-creme/75">
-              Colares, braceletes, anéis e brincos em dourado — escolhidos com cuidado para
+              Colares, braceletes, anéis e brincos em dourado, escolhidos com cuidado para
               acompanhar a sua história. Compre online e receba com carinho.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -79,7 +79,7 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
               <div className="relative aspect-square overflow-hidden rounded-sm">
                 <Image
                   src="/images/logo-alma-cigana.png"
-                  alt="Logo da Alma Cigana Produtos — lua crescente dourada com estrela e rosa sobre fundo marsala"
+                  alt="Logo da Alma Cigana Produtos: lua crescente dourada com estrela e rosa sobre fundo marsala"
                   fill
                   priority
                   sizes="(max-width: 1024px) 90vw, 448px"
@@ -94,7 +94,7 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
         </div>
       </section>
 
-      {/* ——— Benefícios ——— */}
+      {/* Benefícios */}
       <section className="border-b border-dourado/20 bg-white">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-4 gap-y-6 px-4 py-8 sm:grid-cols-4 sm:px-6 lg:px-8">
           {[
@@ -114,7 +114,7 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
         </div>
       </section>
 
-      {/* ——— Apresentação da marca ——— */}
+      {/* Apresentação da marca */}
       <section className="bg-creme">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[0.85fr_1fr] lg:gap-14 lg:px-8 lg:py-20">
           <Reveal className="flex justify-center lg:justify-start">
@@ -156,13 +156,13 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
         </div>
       </section>
 
-      {/* ——— Categorias ——— */}
+      {/* Categorias */}
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <SectionHeading
             eyebrow="Catálogo organizado"
             title="Categorias"
-            description="Encontre a peça certa para o seu momento — explore por tipo de acessório."
+            description="Encontre a peça certa para o seu momento: explore por tipo de acessório."
           />
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
             {(categories ?? []).map((cat, i) => (
@@ -186,7 +186,7 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
         </div>
       </section>
 
-      {/* ——— Produtos em destaque ——— */}
+      {/* Produtos em destaque */}
       <section className="bg-creme">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
@@ -217,7 +217,7 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
         </div>
       </section>
 
-      {/* ——— Seção institucional ——— */}
+      {/* Seção institucional */}
       <section className="relative overflow-hidden bg-marsala-deep">
         <OrnamentDivider className="pt-14 opacity-80" />
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-20">
@@ -233,7 +233,7 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
             {[
               {
                 title: 'Atendimento pessoal',
-                desc: 'Cada pedido vira uma conversa com a loja — antes, durante e depois da compra.',
+                desc: 'Cada pedido vira uma conversa com a loja: antes, durante e depois da compra.',
               },
               {
                 title: 'Catálogo curado',
@@ -241,7 +241,7 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
               },
               {
                 title: 'Identidade autoral',
-                desc: 'Marsala e dourado, lua, estrela e rosa — símbolos que assinam cada detalhe.',
+                desc: 'Marsala e dourado, lua, estrela e rosa: símbolos que assinam cada detalhe.',
               },
             ].map((p, i) => (
               <Reveal key={p.title} delay={i * 0.08}>
@@ -256,7 +256,7 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
         </div>
       </section>
 
-      {/* ——— Chamada final ——— */}
+      {/* Chamada final */}
       <section className="bg-marsala">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-5 px-4 py-14 text-center sm:px-6 lg:px-8">
           <Reveal>
@@ -264,8 +264,8 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
               Sua próxima peça favorita está aqui
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-[14px] leading-relaxed text-creme/75">
-              Compre online em poucos cliques, ou fale com a loja para escolher a peça perfeita —
-              sem cadastro complicado, com atendimento de verdade.
+              Compre online em poucos cliques, ou fale com a loja para escolher a peça perfeita.
+              Sem cadastro complicado, com atendimento de verdade.
             </p>
             <div className="mt-7 flex flex-wrap justify-center gap-3">
               <button
@@ -289,7 +289,7 @@ export function HomeView({ categories }: { categories: Category[] | null }) {
         </div>
       </section>
 
-      {/* ——— Redes sociais ——— */}
+      {/* Redes sociais */}
       <section className="bg-creme">
         <div className="mx-auto max-w-6xl px-4 py-12 text-center sm:px-6 lg:px-8">
           <Reveal>

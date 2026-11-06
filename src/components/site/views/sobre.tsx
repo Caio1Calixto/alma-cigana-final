@@ -27,11 +27,11 @@ export function SobreView() {
       {/* Nossa história */}
       <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:py-20">
         <Reveal>
-          <div className="overflow-hidden rounded-sm border border-dourado/50 bg-white p-2.5">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+          <div className="relative overflow-hidden rounded-sm border border-dourado/50 bg-marsala-night p-2.5 shadow-[0_18px_60px_-12px_rgba(74,7,16,0.45)]">
+            <div className="relative aspect-square overflow-hidden rounded-sm">
               <Image
-                src="/images/sobre.jpg"
-                alt="Peças douradas da Alma Cigana sobre linho creme com pétalas de rosa"
+                src="/images/logo-alma-cigana.png"
+                alt="Logo da Alma Cigana Produtos: medalhão dourado com lua crescente, estrela e rosa sobre fundo marsala"
                 fill
                 sizes="(max-width: 1024px) 90vw, 560px"
                 className="object-cover"
@@ -101,7 +101,7 @@ export function SobreView() {
             <blockquote className="mx-auto max-w-2xl border-t border-b border-dourado/40 py-8 text-center">
               <Sparkles className="mx-auto h-5 w-5 text-dourado" strokeWidth={1.6} />
               <p className="mt-3 font-serif text-xl italic leading-relaxed text-marsala-deep sm:text-2xl">
-                “Alma Cigana — onde a beleza encontra significado e cada detalhe conta uma
+                “Alma Cigana: onde a beleza encontra significado e cada detalhe conta uma
                 história.”
               </p>
               <footer className="mt-3 text-[11px] uppercase tracking-eyebrow text-tinta/50">

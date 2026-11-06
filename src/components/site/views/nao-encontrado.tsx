@@ -16,7 +16,7 @@ export function NaoEncontradoView({ path }: { path?: string }) {
           {path
             ? `Não encontramos nada em "${path}". `
             : ''}
-          Talvez a estrela tenha nos levado para outro caminho — volte para o início ou explore o
+          Talvez a estrela tenha nos levado para outro caminho. Volte para o início ou explore o
           catálogo.
         </p>
         <OrnamentDivider className="my-2" />

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Alma Cigana" }],
   openGraph: {
     title: "Alma Cigana · Joias e Acessórios",
-    description: "Joias e acessórios com alma — marsala e dourado, lua, estrela e rosa.",
+    description: "Joias e acessórios com alma: marsala e dourado, lua, estrela e rosa.",
     siteName: "Alma Cigana",
     type: "website",
   },

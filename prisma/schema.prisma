@@ -1,5 +1,8 @@
+// engineType = "client": usa driver adapter (melhor-sqlite3) em vez de binário nativo.
+// Evita o download dos engines do Prisma em build/preview.
 generator client {
-  provider = "prisma-client-js"
+  provider   = "prisma-client-js"
+  engineType = "client"
 }
 
 datasource db {

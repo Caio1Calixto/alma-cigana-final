@@ -43,7 +43,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  /* ——— Paleta Alma Cigana: marsala é a base, dourado é acabamento ——— */
+  /* Paleta Alma Cigana: marsala é a base, dourado é acabamento */
   --color-marsala: #7a1220;
   --color-marsala-deep: #4a0710;
   --color-marsala-night: #2e050b;
@@ -106,7 +106,7 @@
   }
 }
 
-/* ——— Barra de rolagem discreta em tom da marca ——— */
+/* Barra de rolagem discreta em tom da marca */
 @layer base {
   * {
     scrollbar-width: thin;
